@@ -1,208 +1,111 @@
-# JSON-like SpreadSheet Converter
+# JSON-like SpreadSheet
 
-Transform Excel spreadsheets into LLM-friendly JSON format, making it easy for Large Language Models to understand and work with spreadsheet data.
+Turn Excel hell into something LLMs can actually understand. Because spreadsheets shouldn't be stuck in the past.
 
-## Why This Tool?
+## Why?
 
-### The Spreadsheet-to-LLM Challenge
-Spreadsheets are everywhere in business, but they're not easily consumable by Large Language Models (LLMs). This tool bridges that gap by:
-- Converting complex Excel structures into clean, structured JSON
-- Making spreadsheet data and formulas "readable" for LLMs
-- Preserving essential context and relationships
-- Managing token limits through smart sampling
+Let's be real - spreadsheets are everywhere and they're a pain. This tool:
+- Converts Excel mess into clean JSON
+- Makes it actually readable for AI
+- Keeps the important stuff intact
+- Handles massive files without breaking
 
-### Key Benefits
-- **LLM Integration**: Perfect for applications where LLMs need to analyze, explain, or transform spreadsheet data
-- **Token Management**: Built-in token counting and sampling to stay within LLM context limits
-- **Complete Context**: Captures formulas, styles, and relationships that help LLMs understand spreadsheet logic
-- **Universal Format**: Converts widespread Excel files into JSON that any LLM can process
+✨ **What you get:**
+- Smart JSON that AI can work with
+- No more token limit headaches
+- All the formulas and relationships preserved
+- Works with any Excel file
 
-## Features
+## Quick Start
 
-- Converts Excel files (.xlsx, .xls, .xlsm) to detailed JSON format
-- Captures comprehensive spreadsheet metadata:
-  - Named ranges
-  - Cell values and formulas
-  - Styles and formatting
-  - Conditional formatting rules
-  - Data validation
-  - Protection settings
-  - Sheet view settings
-  - Pivot tables
-  - Charts
-  - Form controls
-  - Auto-filters
-  - Cell dependencies
-- Intelligent token counting for LLM compatibility
-- Optional row sampling for large spreadsheets
-- Colored terminal output for better visibility
-- Comprehensive error handling
-
-## Requirements
-
-```
-openpyxl
-termcolor
-```
-
-## Installation
-
-1. Clone the repository:
+1. Get it:
 ```bash
 git clone https://github.com/FrancyJGLisboa/JSON-like-SpreadSheet.git
 cd JSON-like-SpreadSheet
-```
-
-2. Install dependencies:
-```bash
 pip install -r requirements.txt
 ```
 
-## Usage
-
-Basic usage:
+2. Use it:
 ```bash
-python spreadsheet_converter.py <path_to_spreadsheet>
+python spreadsheet_converter.py your_file.xlsx
 ```
 
-With row sampling for large spreadsheets (helps stay within LLM token limits):
+Need to handle a huge file? No problem:
 ```bash
-python spreadsheet_converter.py <path_to_spreadsheet> <sample_size>
+python spreadsheet_converter.py your_file.xlsx 100  # Process 100 rows per sheet
 ```
 
-### Example
-```bash
-# Convert spreadsheet with 100 rows per sheet (good for GPT-3.5's 4K token limit)
-python spreadsheet_converter.py example.xlsx 100
-```
+## What It Captures
+
+Everything that matters:
+- Formulas & calculations
+- Styles & formatting
+- Data rules & validation
+- Protection settings
+- Charts & pivot tables
+- Cell connections
 
 ## Output
 
-The script generates an LLM-friendly JSON file in the `converted_json` directory with:
-- Automatic token counting for LLM compatibility
-- Smart filename format including token count
-- LLM-specific recommendations based on file size
-- Complete metadata for context preservation
+Gets you a clean JSON file with:
+- Auto token counting
+- Smart file naming
+- AI model suggestions
+- Full context preserved
 
-### Output Format
+Example structure:
 ```json
 {
   "file_name": "example.xlsx",
   "metadata": {
     "token_count": 1234,
-    "conversion_timestamp": "20240205_155518",
-    "original_filename": "example.xlsx"
-  },
-  "named_ranges": {
-    "MyRange": {
-      "value": "Sheet1!A1:B10",
-      "scope": "workbook"
-    }
+    "conversion_timestamp": "20240205_155518"
   },
   "sheets": {
     "Sheet1": {
-      "metadata": {
-        "title": "Sheet1",
-        "dimensions": "A1:Z100",
-        "max_row": 100,
-        "max_column": 26
-      },
       "cells": {
         "A1": {
-          "value": "Example",
-          "style": {
-            "font": {
-              "bold": true,
-              "italic": false,
-              "color": "FF0000"
-            }
-          }
+          "value": "Data",
+          "formula": "=SUM(B1:B10)",
+          "style": {...}
         }
-      },
-      "merged_cells": ["A1:B1"],
-      "conditional_formatting": [...],
-      "protection": {...},
-      "view_settings": {...}
+      }
     }
   }
 }
 ```
 
-## Error Handling
+## Using with AI
 
-The script includes comprehensive error handling:
-- Validates file existence and format
-- Handles missing attributes gracefully
-- Provides detailed error messages
-- Continues processing when encountering non-critical errors
+The JSON output works great with:
+- GPT-3.5 (< 4K tokens)
+- GPT-4 (< 32K tokens)
+- Claude & other LLMs
 
-## Contributing
+Quick prompt template:
+```
+Check out this spreadsheet and tell me:
+1. What's it trying to do?
+2. Any formulas that could break?
+3. How to make it better?
+```
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+## Pro Tips
+
+💡 For big files:
+- Start with a few rows
+- Keep the headers
+- Split if needed
+
+🔥 For best results:
+- Let the AI see the structure
+- Keep the formulas connected
+- Use the token count
+
+## Want to Help?
+
+Open issues or PRs if you've got ideas to make this better.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## LLM Integration Guide
-
-### Token Management
-The tool helps manage LLM token limits by:
-- Counting tokens in the output JSON
-- Providing sampling options for large spreadsheets
-- Suggesting appropriate LLM models based on token count
-
-### Model Recommendations
-Based on the token count, the tool suggests suitable LLM models:
-- < 4,000 tokens: Ideal for GPT-3.5-turbo
-- < 8,000 tokens: Suitable for GPT-3.5-turbo-8K
-- < 16,000 tokens: Works with GPT-3.5-turbo-16K
-- < 32,000 tokens: Compatible with GPT-4
-- \> 32,000 tokens: Consider using sampling or splitting the data
-
-### Example LLM Prompts
-Here are some ways to use the JSON output with LLMs:
-
-1. **Analysis Prompt**:
-```
-Analyze this spreadsheet JSON and explain:
-1. The overall structure and purpose
-2. Key formulas and their relationships
-3. Data validation rules and their meaning
-4. Conditional formatting logic
-```
-
-2. **Transformation Prompt**:
-```
-Based on this spreadsheet JSON:
-1. Suggest improvements to the formula structure
-2. Identify potential errors or inconsistencies
-3. Recommend optimization opportunities
-4. Explain the business logic encoded in the formulas
-```
-
-3. **Documentation Prompt**:
-```
-Create documentation for this spreadsheet by explaining:
-1. The purpose of each sheet
-2. How the named ranges are used
-3. The protection scheme and its business logic
-4. The relationship between different data elements
-```
-
-## Best Practices
-
-1. **Token Optimization**:
-   - Start with a small sample (3-4 rows) to test LLM understanding
-   - Include header rows for context
-   - Use sampling strategically for large sheets
-
-2. **Context Preservation**:
-   - Keep metadata and structure information
-   - Preserve formula relationships
-   - Maintain styling that indicates importance
-
-3. **LLM Integration**:
-   - Use the token count to choose appropriate models
-   - Structure prompts to leverage the JSON format
-   - Consider chunking for large spreadsheets 
+MIT - do what you want with it. 
