@@ -28,4 +28,8 @@ ENV/
 *.xlsx
 *.xls
 *.xlsm
-converted_json/ 
+converted_json/
+output/
+.DS_Store
+.AppleDouble
+.LSOverride 
