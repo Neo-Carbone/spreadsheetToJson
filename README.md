@@ -108,4 +108,4 @@ Open issues or PRs if you've got ideas to make this better.
 
 ## License
 
-MIT - do what you want with it. 
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details. 
