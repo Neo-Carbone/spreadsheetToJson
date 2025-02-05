@@ -1,0 +1,5 @@
+openpyxl
+termcolor
+pytest
+pandas
+numpy 

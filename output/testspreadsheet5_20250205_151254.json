@@ -1,0 +1,820 @@
+{
+  "fileName": "testspreadsheet5.xlsx",
+  "sheets": [
+    {
+      "sheetTitle": "Results",
+      "maxRow": 34,
+      "maxColumn": 20,
+      "cells": {
+        "C3": {
+          "value": "Data set Variables",
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": null
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "G3": {
+          "value": "Enter Variables to Regress ",
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": null
+            },
+            "alignment": {
+              "horizontal": "center",
+              "vertical": null
+            }
+          }
+        },
+        "K3": {
+          "value": "Regression Formula to be Fitted",
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": null
+            },
+            "alignment": {
+              "horizontal": "center",
+              "vertical": null
+            }
+          }
+        },
+        "O3": {
+          "value": "Regression Diagnostics",
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": null
+            },
+            "alignment": {
+              "horizontal": "center",
+              "vertical": null
+            }
+          }
+        },
+        "C5": {
+          "value": "=IF(Data!A$1=\"\",\"\",Data!A$1)",
+          "formula": "=IF(Data!A$1=\"\",\"\",Data!A$1)",
+          "calculated_value": "=IF(Data!A$1=\"\",\"\",Data!A$1)",
+          "dependencies": [],
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "F5": {
+          "value": 0,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "G5": {
+          "value": "y",
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": "right",
+              "vertical": null
+            }
+          }
+        },
+        "I5": {
+          "value": 0.5987,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "K5": {
+          "value": "=H5&\" ~ \"&H6&IF(H7=\"\",\"\",\" + \"&H7)&IF(H8=\"\",\"\",\" + \"&H8)&IF(H9=\"\",\"\",\" + \"&H9)&IF(H10=\"\",\"\",\" + \"&H10)&IF(H11=\"\",\"\",\" + \"&H11)&IF(H12=\"\",\"\",\" + \"&H12)&IF(H13=\"\",\"\",\" + \"&H13)&IF(H14=\"\",\"\",\" + \"&H14)&IF(H15=\"\",\"\",\" + \"&H15)&IF(H16=\"\",\"\",\" + \"&H16)&IF(H17=\"\",\"\",\" + \"&H17)&IF(H18=\"\",\"\",\" + \"&H18)&IF(H19=\"\",\"\",\" + \"&H19)&IF(H20=\"\",\"\",\" + \"&H20)&IF(H21=\"\",\"\",\" + \"&H21)&IF(H22=\"\",\"\",\" + \"&H22)&IF(H23=\"\",\"\",\" + \"&H23)&IF(H22=\"\",\"\",\" + \"&H22)&IF(H23=\"\",\"\",\" + \"&H23)&IF(H24=\"\",\"\",\" + \"&H24)&IF(H25=\"\",\"\",\" + \"&H25)",
+          "formula": "=H5&\" ~ \"&H6&IF(H7=\"\",\"\",\" + \"&H7)&IF(H8=\"\",\"\",\" + \"&H8)&IF(H9=\"\",\"\",\" + \"&H9)&IF(H10=\"\",\"\",\" + \"&H10)&IF(H11=\"\",\"\",\" + \"&H11)&IF(H12=\"\",\"\",\" + \"&H12)&IF(H13=\"\",\"\",\" + \"&H13)&IF(H14=\"\",\"\",\" + \"&H14)&IF(H15=\"\",\"\",\" + \"&H15)&IF(H16=\"\",\"\",\" + \"&H16)&IF(H17=\"\",\"\",\" + \"&H17)&IF(H18=\"\",\"\",\" + \"&H18)&IF(H19=\"\",\"\",\" + \"&H19)&IF(H20=\"\",\"\",\" + \"&H20)&IF(H21=\"\",\"\",\" + \"&H21)&IF(H22=\"\",\"\",\" + \"&H22)&IF(H23=\"\",\"\",\" + \"&H23)&IF(H22=\"\",\"\",\" + \"&H22)&IF(H23=\"\",\"\",\" + \"&H23)&IF(H24=\"\",\"\",\" + \"&H24)&IF(H25=\"\",\"\",\" + \"&H25)",
+          "calculated_value": "=H5&\" ~ \"&H6&IF(H7=\"\",\"\",\" + \"&H7)&IF(H8=\"\",\"\",\" + \"&H8)&IF(H9=\"\",\"\",\" + \"&H9)&IF(H10=\"\",\"\",\" + \"&H10)&IF(H11=\"\",\"\",\" + \"&H11)&IF(H12=\"\",\"\",\" + \"&H12)&IF(H13=\"\",\"\",\" + \"&H13)&IF(H14=\"\",\"\",\" + \"&H14)&IF(H15=\"\",\"\",\" + \"&H15)&IF(H16=\"\",\"\",\" + \"&H16)&IF(H17=\"\",\"\",\" + \"&H17)&IF(H18=\"\",\"\",\" + \"&H18)&IF(H19=\"\",\"\",\" + \"&H19)&IF(H20=\"\",\"\",\" + \"&H20)&IF(H21=\"\",\"\",\" + \"&H21)&IF(H22=\"\",\"\",\" + \"&H22)&IF(H23=\"\",\"\",\" + \"&H23)&IF(H22=\"\",\"\",\" + \"&H22)&IF(H23=\"\",\"\",\" + \"&H23)&IF(H24=\"\",\"\",\" + \"&H24)&IF(H25=\"\",\"\",\" + \"&H25)",
+          "dependencies": [
+            "H17",
+            "H10",
+            "H18",
+            "H12",
+            "H23",
+            "H24",
+            "H11",
+            "H7",
+            "H9",
+            "H13",
+            "H19",
+            "H25",
+            "H20",
+            "H21",
+            "H16",
+            "H14",
+            "H5",
+            "H6",
+            "H22",
+            "H8",
+            "H15"
+          ],
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": "left",
+              "vertical": null
+            }
+          }
+        },
+        "O5": {
+          "value": "Summary",
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": null
+            },
+            "alignment": {
+              "horizontal": "center",
+              "vertical": null
+            }
+          }
+        },
+        "R5": {
+          "value": "Normality of Residuals",
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": null
+            },
+            "alignment": {
+              "horizontal": "center",
+              "vertical": null
+            }
+          }
+        },
+        "C6": {
+          "value": "=IF(Data!B$1=\"\",\"\",Data!B$1)",
+          "formula": "=IF(Data!B$1=\"\",\"\",Data!B$1)",
+          "calculated_value": "=IF(Data!B$1=\"\",\"\",Data!B$1)",
+          "dependencies": [],
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "F6": {
+          "value": 1,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "G6": {
+          "value": "x1",
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": "right",
+              "vertical": null
+            }
+          }
+        },
+        "I6": {
+          "value": 0.72787,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "C7": {
+          "value": "=IF(Data!C$1=\"\",\"\",Data!C$1)",
+          "formula": "=IF(Data!C$1=\"\",\"\",Data!C$1)",
+          "calculated_value": "=IF(Data!C$1=\"\",\"\",Data!C$1)",
+          "dependencies": [],
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "F7": {
+          "value": 2,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "G7": {
+          "value": "x2",
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": "right",
+              "vertical": null
+            }
+          }
+        },
+        "I7": {
+          "value": 0.53411,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "K7": {
+          "value": "Fitted Model",
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": null
+            },
+            "alignment": {
+              "horizontal": "center",
+              "vertical": null
+            }
+          }
+        },
+        "C8": {
+          "value": "=IF(Data!D$1=\"\",\"\",Data!D$1)",
+          "formula": "=IF(Data!D$1=\"\",\"\",Data!D$1)",
+          "calculated_value": "=IF(Data!D$1=\"\",\"\",Data!D$1)",
+          "dependencies": [],
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "F8": {
+          "value": 3,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "G8": {
+          "value": "x3",
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": "right",
+              "vertical": null
+            }
+          }
+        },
+        "I8": {
+          "value": 0.56641,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "C9": {
+          "value": "=IF(Data!E$1=\"\",\"\",Data!E$1)",
+          "formula": "=IF(Data!E$1=\"\",\"\",Data!E$1)",
+          "calculated_value": "=IF(Data!E$1=\"\",\"\",Data!E$1)",
+          "dependencies": [],
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "F9": {
+          "value": 4,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "G9": {
+          "value": "x4",
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": "right",
+              "vertical": null
+            }
+          }
+        },
+        "I9": {
+          "value": 0.50182,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "K9": {
+          "value": "=\"f(x) = \"&ROUND(T19,5)&G6&\" + \"&IF(T20=\"\",\"\",ROUND(T20,5)&G7&\" + \")&IF(T21=\"\",\"\",ROUND(T21,5)&G8&\" + \")&IF(T22=\"\",\"\",ROUND(T22,5)&G9&\" + \")&IF(T23=\"\",\"\",ROUND(T23,5)&G10&\" + \")&IF(T24=\"\",\"\",ROUND(T24,5)&G11&\" + \")&IF(T25=\"\",\"\",ROUND(T25,5)&G12&\" + \")&IF(T26=\"\",\"\",ROUND(T26,5)&G13&\" + \")&IF(T27=\"\",\"\",ROUND(T27,5)&G14&\" + \")&IF(T28=\"\",\"\",ROUND(T28,5)&G15&\" + \")&IF(T29=\"\",\"\",ROUND(T29,5)&G16&\" + \")&IF(T30=\"\",\"\",ROUND(T30,5)&G17&\" + \")&IF(T31=\"\",\"\",ROUND(T31,5)&G18&\" + \")&IF(T32=\"\",\"\",ROUND(T32,5)&G19&\" + \")&IF(T33=\"\",\"\",ROUND(T33,5)&G20&\" + \")&IF(T34=\"\",\"\",ROUND(T34,5)&G21&\" + \")&IF(T35=\"\",\"\",ROUND(T35,5)&G22&\" + \")&IF(T36=\"\",\"\",ROUND(T36,5)&G23&\" + \")&IF(T36=\"\",\"\",ROUND(T36,5)&G24&\" + \")&IF(T37=\"\",\"\",ROUND(T37,5)&G25&\" + \")&ROUND(T18,5)",
+          "formula": "=\"f(x) = \"&ROUND(T19,5)&G6&\" + \"&IF(T20=\"\",\"\",ROUND(T20,5)&G7&\" + \")&IF(T21=\"\",\"\",ROUND(T21,5)&G8&\" + \")&IF(T22=\"\",\"\",ROUND(T22,5)&G9&\" + \")&IF(T23=\"\",\"\",ROUND(T23,5)&G10&\" + \")&IF(T24=\"\",\"\",ROUND(T24,5)&G11&\" + \")&IF(T25=\"\",\"\",ROUND(T25,5)&G12&\" + \")&IF(T26=\"\",\"\",ROUND(T26,5)&G13&\" + \")&IF(T27=\"\",\"\",ROUND(T27,5)&G14&\" + \")&IF(T28=\"\",\"\",ROUND(T28,5)&G15&\" + \")&IF(T29=\"\",\"\",ROUND(T29,5)&G16&\" + \")&IF(T30=\"\",\"\",ROUND(T30,5)&G17&\" + \")&IF(T31=\"\",\"\",ROUND(T31,5)&G18&\" + \")&IF(T32=\"\",\"\",ROUND(T32,5)&G19&\" + \")&IF(T33=\"\",\"\",ROUND(T33,5)&G20&\" + \")&IF(T34=\"\",\"\",ROUND(T34,5)&G21&\" + \")&IF(T35=\"\",\"\",ROUND(T35,5)&G22&\" + \")&IF(T36=\"\",\"\",ROUND(T36,5)&G23&\" + \")&IF(T36=\"\",\"\",ROUND(T36,5)&G24&\" + \")&IF(T37=\"\",\"\",ROUND(T37,5)&G25&\" + \")&ROUND(T18,5)",
+          "calculated_value": "=\"f(x) = \"&ROUND(T19,5)&G6&\" + \"&IF(T20=\"\",\"\",ROUND(T20,5)&G7&\" + \")&IF(T21=\"\",\"\",ROUND(T21,5)&G8&\" + \")&IF(T22=\"\",\"\",ROUND(T22,5)&G9&\" + \")&IF(T23=\"\",\"\",ROUND(T23,5)&G10&\" + \")&IF(T24=\"\",\"\",ROUND(T24,5)&G11&\" + \")&IF(T25=\"\",\"\",ROUND(T25,5)&G12&\" + \")&IF(T26=\"\",\"\",ROUND(T26,5)&G13&\" + \")&IF(T27=\"\",\"\",ROUND(T27,5)&G14&\" + \")&IF(T28=\"\",\"\",ROUND(T28,5)&G15&\" + \")&IF(T29=\"\",\"\",ROUND(T29,5)&G16&\" + \")&IF(T30=\"\",\"\",ROUND(T30,5)&G17&\" + \")&IF(T31=\"\",\"\",ROUND(T31,5)&G18&\" + \")&IF(T32=\"\",\"\",ROUND(T32,5)&G19&\" + \")&IF(T33=\"\",\"\",ROUND(T33,5)&G20&\" + \")&IF(T34=\"\",\"\",ROUND(T34,5)&G21&\" + \")&IF(T35=\"\",\"\",ROUND(T35,5)&G22&\" + \")&IF(T36=\"\",\"\",ROUND(T36,5)&G23&\" + \")&IF(T36=\"\",\"\",ROUND(T36,5)&G24&\" + \")&IF(T37=\"\",\"\",ROUND(T37,5)&G25&\" + \")&ROUND(T18,5)",
+          "dependencies": [
+            "T18",
+            "G11",
+            "T24",
+            "T25",
+            "T32",
+            "G25",
+            "T37",
+            "T30",
+            "G18",
+            "G12",
+            "T31",
+            "T29",
+            "T35",
+            "G24",
+            "T36",
+            "T19",
+            "G15",
+            "G21",
+            "G17",
+            "T23",
+            "T27",
+            "T26",
+            "G13",
+            "G22",
+            "G14",
+            "G10",
+            "G9",
+            "T21",
+            "G20",
+            "T33",
+            "T28",
+            "T20",
+            "G6",
+            "G8",
+            "G16",
+            "G7",
+            "G19",
+            "G23",
+            "T22",
+            "T34"
+          ],
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": "left",
+              "vertical": null
+            }
+          }
+        },
+        "C10": {
+          "value": "=IF(Data!F$1=\"\",\"\",Data!F$1)",
+          "formula": "=IF(Data!F$1=\"\",\"\",Data!F$1)",
+          "calculated_value": "=IF(Data!F$1=\"\",\"\",Data!F$1)",
+          "dependencies": [],
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "G10": {
+          "value": "x5",
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": "FF2C3E50"
+            },
+            "fill": {
+              "background": "FFF8F8FF"
+            },
+            "alignment": {
+              "horizontal": "right",
+              "vertical": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "sheetTitle": "Data",
+      "maxRow": 88,
+      "maxColumn": 26,
+      "cells": {
+        "Y3": {
+          "value": "residuals",
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": null
+            },
+            "fill": {
+              "background": "00000000"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "Y6": {
+          "value": "index",
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": null
+            },
+            "fill": {
+              "background": "00000000"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "Z6": {
+          "value": 0,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": null
+            },
+            "fill": {
+              "background": "00000000"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "Y7": {
+          "value": 0,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": null
+            },
+            "fill": {
+              "background": "00000000"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "Z7": {
+          "value": -0.1,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": null
+            },
+            "fill": {
+              "background": "00000000"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "Y8": {
+          "value": 1,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": null
+            },
+            "fill": {
+              "background": "00000000"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "Z8": {
+          "value": -0.31,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": null
+            },
+            "fill": {
+              "background": "00000000"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "Y9": {
+          "value": 2,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": null
+            },
+            "fill": {
+              "background": "00000000"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "Z9": {
+          "value": 0.153,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": null
+            },
+            "fill": {
+              "background": "00000000"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "Y10": {
+          "value": 3,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": null
+            },
+            "fill": {
+              "background": "00000000"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        },
+        "Z10": {
+          "value": -0.06,
+          "style": {
+            "font": {
+              "bold": false,
+              "italic": false,
+              "color": null
+            },
+            "fill": {
+              "background": "00000000"
+            },
+            "alignment": {
+              "horizontal": null,
+              "vertical": null
+            }
+          }
+        }
+      }
+    }
+  ]
+}
