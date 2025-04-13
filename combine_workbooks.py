@@ -255,7 +255,8 @@ def process_directory(directory: str, args) -> List[str]:
         'formulas_only': args.formulas_only,
         'keep_formatting': args.keep_formatting,
         'minify': args.minify,
-        'no_context': args.no_context
+        'no_context': args.no_context,
+        'intelligent_sampling': args.intelligent_sampling
     }
     
     # Process each workbook
@@ -342,6 +343,12 @@ def parse_args():
         help='Skip individual workbook processing, use existing JSON files'
     )
     
+    parser.add_argument(
+        '-i', '--intelligent-sampling',
+        action='store_true',
+        help='Use formula-preserving intelligent sampling to reduce token count'
+    )
+    
     return parser.parse_args()
 
 def main():
@@ -398,6 +405,10 @@ def main():
     # Token count recommendations
     token_count = consolidated_data.get(map_key('metadata'), {}).get(map_key('token_count'), 0)
     print_status(f"  Estimated token count: {token_count}", 'info')
+    
+    # Include info about sampling in the summary
+    if args.intelligent_sampling:
+        print_status("  Used intelligent sampling to reduce token count", 'info')
     
     print_status("\nLLM Recommendations based on token count:", 'info')
     if token_count < 4000:

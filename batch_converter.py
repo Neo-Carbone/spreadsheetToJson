@@ -15,7 +15,8 @@ from spreadsheet_converter import (
     save_json_output, 
     SUPPORTED_EXTENSIONS,
     print_status,
-    TOKEN_EFFICIENT
+    TOKEN_EFFICIENT,
+    convert_spreadsheet_to_json_with_sampling
 )
 
 def process_workbook(file_path: str, args: Dict[str, Any]) -> Dict[str, Any]:
@@ -25,13 +26,25 @@ def process_workbook(file_path: str, args: Dict[str, Any]) -> Dict[str, Any]:
         start_time = time.time()
         
         # Convert spreadsheet to JSON
-        json_data = convert_spreadsheet_to_json(
-            file_path, 
-            args['sample_size'], 
-            args['formulas_only'], 
-            args['keep_formatting'],
-            not args['no_context']
-        )
+        if args.get('intelligent_sampling', False):
+            # Use the version with intelligent sampling
+            json_data = convert_spreadsheet_to_json_with_sampling(
+                file_path, 
+                args['sample_size'], 
+                args['formulas_only'], 
+                args['keep_formatting'],
+                not args['no_context'],
+                True  # intelligent_sampling=True
+            )
+        else:
+            # Use the regular version without intelligent sampling
+            json_data = convert_spreadsheet_to_json(
+                file_path, 
+                args['sample_size'], 
+                args['formulas_only'], 
+                args['keep_formatting'],
+                not args['no_context']
+            )
         
         # Save with token count in filename
         output_path = save_json_output(json_data, file_path, args['minify'])
