@@ -1,111 +1,92 @@
-# JSON-like SpreadSheet
+# Token-Efficient Excel to JSON Converter
 
-Turn Excel hell into something LLMs can actually understand. Because spreadsheets shouldn't be stuck in the past.
+A tool for converting Excel workbooks to a token-efficient JSON format, suitable for use with large language models.
 
-## Why?
+## Features
 
-Let's be real - spreadsheets are everywhere and they're a pain. This tool:
-- Converts Excel mess into clean JSON
-- Makes it actually readable for AI
-- Keeps the important stuff intact
-- Handles massive files without breaking
+- **Token Efficiency**: Abbreviates property names and only includes essential data.
+- **Formula Extraction**: Preserves formulas and their structure for AI interpretation.
+- **Enriched Context**: Adds context about tables, column types, and formula patterns.
+- **Named Range Support**: Includes information about named ranges used in formulas.
+- **Pivot Table Support**: Extracts pivot table structures and fields in a token-efficient format.
+- **Command-line Options**: Flexible options for customizing the conversion process.
 
-✨ **What you get:**
-- Smart JSON that AI can work with
-- No more token limit headaches
-- All the formulas and relationships preserved
-- Works with any Excel file
+## Usage
 
-## Quick Start
-
-1. Get it:
 ```bash
-git clone https://github.com/FrancyJGLisboa/JSON-like-SpreadSheet.git
-cd JSON-like-SpreadSheet
-pip install -r requirements.txt
+python spreadsheet_converter.py <excel_file> [options]
 ```
 
-2. Use it:
-```bash
-python spreadsheet_converter.py your_file.xlsx
+### Command-line Options
+
+- `--rows N`: Process only the first N rows of each sheet (default: all rows)
+- `--formulas-only`: Only include cells with formulas and their dependencies
+- `--keep-formatting`: Include formatting information (uses more tokens)
+- `--no-minify`: Output formatted JSON instead of minified (uses more tokens)
+- `--no-context`: Don't add enriched context information
+
+## Enriched Context
+
+The converter provides enriched context in the resulting JSON to help AI understand and implement Excel functionality:
+
+1. **Table Structures**: Identifies Excel tables, their columns, and ranges
+2. **Column Types**: Detects data types (string, number, date, currency) for columns
+3. **Formula Patterns**: Extracts frequently used formula patterns
+4. **Sample Calculated Values**: Provides samples of calculated values for testing
+5. **Implementation Notes**: Guidance for JavaScript implementation of formulas
+6. **Pivot Tables**: Information about pivot tables, their fields, and aggregation functions
+
+## Example
+
+Input Excel file:
+```
+| Project | Amount | Tax   | Total  |
+|---------|--------|-------|--------|
+| A       | 100    | 15    | =B2+C2 |
+| B       | 200    | 30    | =B3+C3 |
 ```
 
-Need to handle a huge file? No problem:
-```bash
-python spreadsheet_converter.py your_file.xlsx 100  # Process 100 rows per sheet
-```
-
-## What It Captures
-
-Everything that matters:
-- Formulas & calculations
-- Styles & formatting
-- Data rules & validation
-- Protection settings
-- Charts & pivot tables
-- Cell connections
-
-## Output
-
-Gets you a clean JSON file with:
-- Auto token counting
-- Smart file naming
-- AI model suggestions
-- Full context preserved
-
-Example structure:
+Output JSON (minified for brevity):
 ```json
 {
-  "file_name": "example.xlsx",
-  "metadata": {
-    "token_count": 1234,
-    "conversion_timestamp": "20240205_155518"
-  },
-  "sheets": {
+  "fn": "example.xlsx",
+  "sh": {
     "Sheet1": {
-      "cells": {
-        "A1": {
-          "value": "Data",
-          "formula": "=SUM(B1:B10)",
-          "style": {...}
-        }
+      "cl": {
+        "A1": {"v": "Project"},
+        "B1": {"v": "Amount"},
+        "C1": {"v": "Tax"},
+        "D1": {"v": "Total"},
+        "A2": {"v": "A"},
+        "B2": {"v": 100},
+        "C2": {"v": 15},
+        "D2": {"v": {"f": "=B2+C2", "cv": 115}, "d": {"cr": ["B2", "C2"]}},
+        "A3": {"v": "B"},
+        "B3": {"v": 200},
+        "C3": {"v": 30},
+        "D3": {"v": {"f": "=B3+C3", "cv": 230}, "d": {"cr": ["B3", "C3"]}}
       }
     }
+  },
+  "ec": {
+    "ct": {"A": "string", "B": "decimal", "C": "decimal", "D": "decimal"},
+    "fp": {"pattern_1": "=B#+C#"},
+    "in": {"js": "This can be implemented in JavaScript as: row => row['Amount'] + row['Tax']"}
   }
 }
 ```
 
-## Using with AI
+## Comparison with Original Tool
 
-The JSON output works great with:
-- GPT-3.5 (< 4K tokens)
-- GPT-4 (< 32K tokens)
-- Claude & other LLMs
-
-Quick prompt template:
-```
-Check out this spreadsheet and tell me:
-1. What's it trying to do?
-2. Any formulas that could break?
-3. How to make it better?
-```
-
-## Pro Tips
-
-💡 For big files:
-- Start with a few rows
-- Keep the headers
-- Split if needed
-
-🔥 For best results:
-- Let the AI see the structure
-- Keep the formulas connected
-- Use the token count
-
-## Want to Help?
-
-Open issues or PRs if you've got ideas to make this better.
+| Feature | Original | Token-Efficient |
+|---------|----------|-----------------|
+| Property names | Full names | Abbreviated (1-2 chars) |
+| Empty cells | Included | Excluded |
+| Formatting | Included | Optional |
+| Context | None | Tables, formulas, types |
+| JSON size | Large | ~70-95% smaller |
+| Pivot tables | Limited | Comprehensive |
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details. 
+MIT 
